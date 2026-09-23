@@ -77,26 +77,14 @@
   <script>
     const BASIC_CHECKOUT_URL = 'https://pay.wiapy.com/cQYTcE9PhifU';
     const PREMIUM_CHECKOUT_URL = 'https://pay.wiapy.com/QyHQpP2tzaRu';
-    const configureCheckout = (selector, url, offer) => {
+    const configureCheckout = (selector, url) => {
       document.querySelectorAll(selector).forEach(link => {
         link.href = url;
         link.target = '_top';
-        link.addEventListener('click', () => {
-          if (typeof fbq === 'function') {
-            fbq('track', 'InitiateCheckout', {
-              value: offer.value,
-              currency: 'BRL',
-              content_name: offer.name,
-              content_ids: [offer.id],
-              content_type: 'product',
-              num_items: offer.items
-            });
-          }
-        });
       });
     };
-    configureCheckout('.checkout-basic', BASIC_CHECKOUT_URL, {id:'pacote-basico',name:'Caminho das Letras — Pacote Básico',value:9.90,items:2});
-    configureCheckout('.checkout-premium', PREMIUM_CHECKOUT_URL, {id:'pacote-premium',name:'Caminho das Letras — Pacote Premium',value:17.90,items:5});
+    configureCheckout('.checkout-basic', BASIC_CHECKOUT_URL);
+    configureCheckout('.checkout-premium', PREMIUM_CHECKOUT_URL);
     const carousel=document.getElementById('activity-carousel');const moveCarousel=direction=>{const card=carousel.querySelector('.preview-card');const distance=card?card.getBoundingClientRect().width+14:carousel.clientWidth*.8;carousel.scrollBy({left:direction*distance,behavior:'smooth'});};document.querySelector('.carousel-btn.prev').addEventListener('click',()=>moveCarousel(-1));document.querySelector('.carousel-btn.next').addEventListener('click',()=>moveCarousel(1));carousel.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();moveCarousel(-1);}if(event.key==='ArrowRight'){event.preventDefault();moveCarousel(1);}});
   </script>
 </body>
