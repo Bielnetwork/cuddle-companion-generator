@@ -18,46 +18,6 @@
     fbq('init', '27887190307626054');
     fbq('track', 'PageView');
     fbq('track', 'ViewContent');
-
-    let metaCheckoutLock = false;
-
-    document.addEventListener('click', function(event) {
-      const target = event.target;
-      const el = target && target.closest ? target.closest('a, button') : null;
-      if (!el) return;
-
-      const href = (
-        el.href ||
-        el.getAttribute('href') ||
-        el.getAttribute('data-href') ||
-        ''
-      ).toLowerCase();
-
-      const text = (
-        el.innerText ||
-        el.textContent ||
-        ''
-      ).toLowerCase();
-
-      const isCheckout =
-        href.includes('wiapy') ||
-        href.includes('checkout') ||
-        href.includes('/pay') ||
-        text.includes('comprar agora') ||
-        text.includes('quero comprar') ||
-        text.includes('quero o kit') ||
-        text.includes('garantir meu acesso') ||
-        text.includes('garantir meu kit');
-
-      if (isCheckout && !metaCheckoutLock) {
-        metaCheckoutLock = true;
-        fbq('track', 'InitiateCheckout');
-
-        setTimeout(function() {
-          metaCheckoutLock = false;
-        }, 3000);
-      }
-    });
   </script>
   <!-- End Meta Pixel Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
