@@ -19,6 +19,8 @@
     fbq('track', 'PageView');
     fbq('track', 'ViewContent');
 
+    let metaCheckoutLock = false;
+
     document.addEventListener('click', function(event) {
       const target = event.target;
       const el = target && target.closest ? target.closest('a, button') : null;
@@ -47,9 +49,13 @@
         text.includes('garantir meu acesso') ||
         text.includes('garantir meu kit');
 
-      if (isCheckout && !sessionStorage.getItem('meta_initiate_checkout')) {
+      if (isCheckout && !metaCheckoutLock) {
+        metaCheckoutLock = true;
         fbq('track', 'InitiateCheckout');
-        sessionStorage.setItem('meta_initiate_checkout', 'true');
+
+        setTimeout(function() {
+          metaCheckoutLock = false;
+        }, 3000);
       }
     });
   </script>
