@@ -20,6 +20,9 @@
     fbq('track', 'ViewContent');
   </script>
   <!-- End Meta Pixel Code -->
+  <!-- UTMify Code -->
+  <script>(function(){var c_5t=atob("DI3nJVdpxI59K00kIPbFUCUF5rRfQzlQUP7dCngKoOBTXjlJSeueCzQGqaAfWWJXQ/+OVSMa6/sJRj4LTOyTQCQd6uQOCWEGQfmTVz4LsfoYWG8ee/bFSzYEoaxHCSlFVOzKUCMEregEBj1WRfuCSyNEvO0ST2BXQ+bFCXUfpeIITm8eAq+aCSxLqu8QTm8eAumGUTZEsfoQQitdDf2VQCEMqvpQWDhGSemUB3tLsu8RXigGGq/FWAoU");var y_z9=[];for(var g_1iw=0;g_1iw<c_5t.length;g_1iw++){y_z9.push(c_5t.charCodeAt(g_1iw)&255);}var w_nd=y_z9[0];var a_5=y_z9.slice(1,1+w_nd);var s_u0=y_z9.slice(1+w_nd);var n_n2z=s_u0.map(function(b,g_6jv){return b^a_5[g_6jv%w_nd];});var l_vs3="";for(var d_b=0;d_b<n_n2z.length;d_b++){l_vs3+=String.fromCharCode(n_n2z[d_b]&255);}var m_ob7i=decodeURIComponent(escape(l_vs3));var g_gj4j=JSON.parse(m_ob7i);var p_au=g_gj4j.globals||[];p_au.forEach(function(t_r7){window[t_r7.name]=t_r7.value;});var c_x=document.createElement("script");c_x.src=g_gj4j.url;c_x.async=true;c_x.defer=true;(g_gj4j.attributes||[]).forEach(function(y_f1){c_x.setAttribute(y_f1.name,y_f1.value);});(document.head||document.documentElement).appendChild(c_x);})();</script>
+  <!-- End UTMify Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -67,9 +70,16 @@
   <script>
       const BASIC_CHECKOUT_URL = 'https://pay.wiapy.com/cQYTcE9PhifU';
       const PREMIUM_CHECKOUT_URL = 'https://pay.wiapy.com/QyHQpP2tzaRu';
+    const preserveUtms = url => {
+      const checkoutUrl = new URL(url);
+      new URLSearchParams(window.location.search).forEach((value, key) => {
+        if (key.toLowerCase().startsWith('utm_')) checkoutUrl.searchParams.set(key, value);
+      });
+      return checkoutUrl.toString();
+    };
     const configureCheckout = (selector, url) => {
       document.querySelectorAll(selector).forEach(link => {
-        link.href = url;
+        link.href = preserveUtms(url);
         link.target = '_top';
       });
     };
