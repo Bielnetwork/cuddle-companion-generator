@@ -94,6 +94,69 @@
     <footer class="footer"><div class="brand">Caminho das Letras</div><p>Material digital de apoio para atividades de alfabetização em casa.</p><div class="footer-links"><span class="footer-link">Termos de Uso</span><span class="footer-link">Política de Privacidade</span><span class="footer-link">Contato</span></div><p class="copyright">© 2026 Caminho das Letras. Todos os direitos reservados.</p></footer>
   </main>
   <script>
+    if (!window.__DISABLE_HYBRID_IMAGE_LOADING__) {
+      const heroImage = document.querySelector('.hero-product');
+      const promoteImage = (image, priority = 'low') => {
+        if (!image) return;
+        image.loading = 'eager';
+        image.fetchPriority = priority;
+      };
+      const observeAhead = (section, images, rootMargin) => {
+        if (!section || !images.length || !('IntersectionObserver' in window)) return;
+        const observer = new IntersectionObserver(entries => {
+          if (!entries.some(entry => entry.isIntersecting)) return;
+          images.forEach(image => promoteImage(image, 'low'));
+          observer.disconnect();
+        }, { rootMargin });
+        observer.observe(section);
+      };
+      const prepareBelowFoldImages = () => {
+        const carouselImages = [...document.querySelectorAll('.preview-image')];
+        const prepareRemainingCarouselImages = () => {
+          carouselImages.slice(1).forEach(image => promoteImage(image, 'low'));
+        };
+        const firstCarouselImage = carouselImages[0];
+        promoteImage(firstCarouselImage, 'auto');
+        if (firstCarouselImage?.complete && firstCarouselImage.naturalWidth) {
+          prepareRemainingCarouselImages();
+        } else if (firstCarouselImage) {
+          let remainingPrepared = false;
+          const prepareRemainingOnce = () => {
+            if (remainingPrepared) return;
+            remainingPrepared = true;
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(prepareRemainingCarouselImages, { timeout: 400 });
+            } else {
+              setTimeout(prepareRemainingCarouselImages, 150);
+            }
+          };
+          firstCarouselImage.addEventListener('load', prepareRemainingOnce, { once: true });
+          firstCarouselImage.addEventListener('error', prepareRemainingOnce, { once: true });
+        }
+        observeAhead(
+          document.querySelector('.testimonials'),
+          [...document.querySelectorAll('.testimonial-photo')],
+          '1500px 0px'
+        );
+        observeAhead(
+          document.querySelector('#ofertas'),
+          [...document.querySelectorAll('.offer-product')],
+          '1700px 0px'
+        );
+      };
+      if (heroImage?.complete && heroImage.naturalWidth) {
+        prepareBelowFoldImages();
+      } else if (heroImage) {
+        let prepared = false;
+        const prepareOnce = () => {
+          if (prepared) return;
+          prepared = true;
+          prepareBelowFoldImages();
+        };
+        heroImage.addEventListener('load', prepareOnce, { once: true });
+        heroImage.addEventListener('error', prepareOnce, { once: true });
+      }
+    }
       const BASIC_CHECKOUT_URL = 'https://pay.wiapy.com/cQYTcE9PhifU';
       const PREMIUM_CHECKOUT_URL = 'https://pay.wiapy.com/QyHQpP2tzaRu';
     const preserveUtms = url => {
