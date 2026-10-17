@@ -57,7 +57,25 @@
     .proofs{background:#fffaf0}.redesign .testimonial-grid{margin-top:22px}.proof-placeholder{display:none}
     .redesign .faq{background:#f7fbfd}.redesign .faq .section-copy{margin-bottom:20px}.redesign .faq-list{text-align:left}
     @media(max-width:600px){.bonus-grid{grid-template-columns:1fr}.icon-grid,.step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.material .preview-card{flex-basis:88%}}
-    @media(max-width:460px){.redesign .section{padding:38px 16px}.redesign .hero{padding-top:25px}.redesign .hero h1{font-size:1.9rem;line-height:1.05;margin-bottom:9px}.redesign .hero .hero-copy{font-size:.94rem;line-height:1.4;margin-bottom:14px}.redesign .hero-product{width:100%;margin:13px auto 12px;border-radius:17px}.hero-price{margin:7px 0 11px}.hero-price strong{font-size:2rem}.compact-trust{font-size:.72rem;gap:5px 10px;margin-top:14px}.pain-grid{grid-template-columns:1fr;gap:8px}.pain-card{padding:15px}.bonus-grid{gap:9px}.bonus-card{display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto;gap:2px 12px;text-align:left;align-items:center}.bonus-slot{grid-row:1/3;width:86px;margin:0}.bonus-card p{font-size:.8rem}.icon-card{min-height:100px;padding:13px 8px;font-size:.79rem}.step-card{padding:44px 9px 13px}.step-card p{font-size:.76rem}.redesign .offer{padding-left:15px;padding-right:15px}.redesign .testimonial-grid{grid-template-columns:1fr}.redesign .testimonial-card{padding:15px}.solution-image{border-radius:17px}}
+    @media(max-width:460px){.redesign .section{padding:38px 16px}.redesign .hero{padding-top:25px}.redesign .hero h1{font-size:1.9rem;line-height:1.05;margin-bottom:9px}.redesign .hero .hero-copy{font-size:.94rem;line-height:1.4;margin-bottom:14px}.redesign .hero-product{width:100%;margin:13px auto 12px;border-radius:17px}.hero-price{margin:7px 0 11px}.hero-price strong{font-size:2rem}.compact-trust{font-size:.72rem;gap:5px 10px;margin-top:14px}.pain-grid{grid-template-columns:1fr;gap:8px}.pain-card{padding:15px}.bonus-grid{gap:9px}.bonus-card{display:block;text-align:center}.bonus-cover{width:82%;margin:0 auto 8px}.bonus-card p{font-size:.8rem}.icon-card{min-height:100px;padding:13px 8px;font-size:.79rem}.step-card{padding:44px 9px 13px}.step-card p{font-size:.76rem}.redesign .offer{padding-left:15px;padding-right:15px}.redesign .testimonial-grid{grid-template-columns:1fr}.redesign .testimonial-card{padding:15px}.solution-image{border-radius:17px}}
+
+    /* Visual safety and conversion polish: preserve complete images and natural proportions. */
+    body{background:#F2FAFF}
+    .redesign h1,.redesign h2,.redesign h3,.redesign .cta,.redesign .hero-price,.redesign .price{font-family:"Nunito",system-ui,sans-serif}
+    .redesign h1,.redesign h2,.redesign h3{font-weight:900}
+    .redesign .hero-product,.redesign .solution-image,.redesign .offer-product,.redesign .bonus-cover,.redesign .preview-image{height:auto!important;aspect-ratio:auto;object-fit:contain;object-position:center;overflow:visible}
+    .redesign .hero-product{border-radius:20px}
+    .bonus{background:#FFF5D6}.redesign .material{background:#DDF4FF}.redesign .solution-redesign,.redesign .proofs,.redesign .faq{background:#fff}.redesign .how-redesign{background:#F2FAFF}
+    .bonus-cover{display:block;width:100%;border-radius:16px;box-shadow:0 7px 18px rgba(22,67,104,.12)}
+    .redesign .cta{background:#008FE8;border-radius:999px;box-shadow:0 6px 0 #0076c0,0 12px 24px rgba(0,143,232,.18);font-weight:900}
+    .redesign .cta:hover{background:#007fd0}
+    .hero-price strong,.price strong{color:#008FE8}
+    .redesign .carousel{overflow:hidden;scroll-snap-type:none}
+    .redesign .carousel-track{display:flex;width:max-content;gap:14px;animation:activity-marquee 20s linear infinite;will-change:transform}
+    .redesign .carousel-track .preview-card{flex:0 0 250px;scroll-snap-align:none}
+    @keyframes activity-marquee{to{transform:translateX(calc(-50% - 7px))}}
+    @media(max-width:460px){.redesign .carousel-track .preview-card{flex-basis:calc(88vw - 42px)}}
+    @media(prefers-reduced-motion:reduce){.redesign .carousel{overflow-x:auto;scroll-snap-type:x mandatory}.redesign .carousel-track{animation:none}.redesign .carousel-track .preview-card{scroll-snap-align:center}}
   </style>
 </head>
 <body>
@@ -72,8 +90,8 @@
       <p class="hero-copy">Um kit com 5 livros de atividades para reforçar a alfabetização, economizar tempo e facilitar a prática no dia a dia.</p>
       <img class="hero-product" src="/landing/assets/hero-kit-completo.png" alt="Caminho das Letras Kids com cinco livros, materiais complementares e exemplos de atividades" width="1448" height="1086" fetchpriority="high">
       <p class="hero-price">A partir de <strong>R$ 9,90</strong></p>
-      <a class="cta section-cta" href="#ofertas">QUERO GARANTIR MEU KIT</a>
-      <div class="compact-trust" aria-label="Informações da compra"><span>Acesso imediato</span><span>Acesso vitalício</span><span>Garantia de 7 dias</span></div>
+      <a class="cta section-cta" href="#ofertas">QUERO COMEÇAR AGORA →</a>
+      <div class="compact-trust" aria-label="Informações da compra"><span>Compra segura</span><span>Acesso imediato</span><span>Acesso vitalício</span><span>Garantia de 7 dias</span></div>
     </section>
 
     <section class="section material" id="atividades" aria-labelledby="gallery-title">
@@ -81,13 +99,13 @@
       <p class="section-copy">De letras e sílabas até leitura e escrita, descubra atividades prontas para tornar a prática da alfabetização mais simples.</p>
       <div class="carousel-wrap">
         <button class="carousel-btn prev" type="button" aria-label="Ver atividade anterior">‹</button>
-        <div class="carousel" id="activity-carousel" tabindex="0" aria-label="Páginas reais dos cinco livros">
+        <div class="carousel" id="activity-carousel" tabindex="0" aria-label="Páginas reais dos cinco livros"><div class="carousel-track" id="activity-track">
           <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-vogais.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-vogais.png" alt="Atividade do livro 1 sobre vogais" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 1 • Letras e Vogais</span></article>
           <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-inicial.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-inicial.png" alt="Atividade do livro 2 sobre sílabas simples" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 2 • Sílabas Simples</span></article>
           <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-faltante.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-faltante.png" alt="Atividade do livro 3 sobre formação de palavras" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 3 • Formação de Palavras</span></article>
           <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-ligue-palavra.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-ligue-palavra.png" alt="Atividade do livro 4 sobre consciência silábica" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 4 • Consciência Silábica</span></article>
           <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-leitura-frase.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-leitura-frase.png" alt="Atividade do livro 5 sobre leitura e compreensão" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 5 • Leitura e Compreensão</span></article>
-        </div>
+        </div></div>
         <button class="carousel-btn next" type="button" aria-label="Ver próxima atividade">›</button>
       </div>
     </section>
@@ -115,11 +133,10 @@
       <h2 id="bonus-title">E ainda recebe bônus extras exclusivos!</h2>
       <p class="section-copy">Além dos livros de alfabetização, você conta com materiais complementares para tornar as atividades mais variadas e interessantes.</p>
       <div class="bonus-grid">
-        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Jogos de Alfabetização">BONUS_JOGOS</div><div><h3>Jogos de Alfabetização</h3><p>Jogos educativos para praticar letras, sílabas e palavras de forma divertida.</p></div></article>
-        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Kit de Leitura e Interpretação">BONUS_LEITURA</div><div><h3>Kit de Leitura e Interpretação</h3><p>Textos infantis e exercícios para praticar a leitura e a compreensão.</p></div></article>
-        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Alfabeto e Sílabas Móveis">BONUS_ALFABETO</div><div><h3>Alfabeto e Sílabas Móveis</h3><p>Materiais para recortar, combinar letras e formar palavras de maneira prática.</p></div></article>
+        <article class="bonus-card"><img class="bonus-cover" src="/landing/assets/bonus-jogos-alfabetizacao.png" alt="Capa do bônus Jogos de Alfabetização" width="390" height="520" loading="lazy" decoding="async"><div><h3>Jogos de Alfabetização</h3><p>Jogos educativos para praticar letras, sílabas e palavras de forma divertida.</p></div></article>
+        <article class="bonus-card"><img class="bonus-cover" src="/landing/assets/bonus-kit-leitura-interpretacao.png" alt="Capa do bônus Kit de Leitura e Interpretação" width="390" height="520" loading="lazy" decoding="async"><div><h3>Kit de Leitura e Interpretação</h3><p>Textos infantis e exercícios para praticar a leitura e a compreensão.</p></div></article>
+        <article class="bonus-card"><img class="bonus-cover" src="/landing/assets/bonus-alfabeto-silabas-moveis.png" alt="Capa do bônus Alfabeto e Sílabas Móveis" width="390" height="520" loading="lazy" decoding="async"><div><h3>Alfabeto e Sílabas Móveis</h3><p>Materiais para recortar, combinar letras e formar palavras de maneira prática.</p></div></article>
       </div>
-      <p class="availability-note">Capas individuais aguardando envio. A disponibilidade comercial deve ser confirmada na oferta antes da publicação.</p>
     </section>
 
     <section class="section benefits-redesign" aria-labelledby="benefits-title">
@@ -311,9 +328,12 @@
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && !upgradeModal.hidden) closeUpgradeModal();
     });
+    const activityTrack=document.getElementById('activity-track');
+    if(activityTrack&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      [...activityTrack.children].forEach(card=>{const clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');clone.querySelectorAll('img').forEach(img=>img.alt='');activityTrack.appendChild(clone);});
+    }
     const carousel=document.getElementById('activity-carousel');const moveCarousel=direction=>{const card=carousel.querySelector('.preview-card');const distance=card?card.getBoundingClientRect().width+14:carousel.clientWidth*.8;carousel.scrollBy({left:direction*distance,behavior:'smooth'});};document.querySelector('.carousel-btn.prev').addEventListener('click',()=>moveCarousel(-1));document.querySelector('.carousel-btn.next').addEventListener('click',()=>moveCarousel(1));carousel.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();moveCarousel(-1);}if(event.key==='ArrowRight'){event.preventDefault();moveCarousel(1);}});
   </script>
 </body>
 </html>
-
 
