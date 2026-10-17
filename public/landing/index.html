@@ -25,7 +25,7 @@
   <!-- End UTMify Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="/landing/assets/hero-atividades-alfabetizacao.png" type="image/png" fetchpriority="high">
+  <link rel="preload" as="image" href="/landing/assets/hero-kit-completo.png" type="image/png" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232168a6'/%3E%3Cpath d='M17 17h13c5 0 9 4 9 9v23c-2-3-5-4-9-4H17V17Zm30 0H35c3 2 5 5 5 9v23c2-3 4-4 7-4V17Z' fill='%23fff7df'/%3E%3Ccircle cx='49' cy='14' r='6' fill='%23f8c948'/%3E%3C/svg%3E">
   <style>
@@ -41,63 +41,153 @@
     @media(max-width:460px){.hero{padding-top:18px;padding-bottom:23px}.hero h1{font-size:1.55rem;line-height:1.05;margin-bottom:8px}.hero-copy{font-size:.88rem;line-height:1.32;margin-bottom:7px}.hero .hero-product{width:82%;margin:7px auto 8px}.hero-support{font-size:.82rem;line-height:1.32;margin-bottom:7px}.hero-benefit-list{margin:6px auto 8px;gap:2px}.hero-benefit-list li{padding:3px 4px 3px 23px;font-size:.76rem;line-height:1.25}.hero-benefit-list li:before{left:5px}.hero .section-cta{margin-top:8px}.hero-reassurance{gap:3px 9px;margin-top:11px;font-size:.68rem}.concern{padding-top:38px;padding-bottom:38px}.concern>h2{font-size:1.55rem}.concern-arrow{margin:12px 0 6px;font-size:1.55rem}.concern-transition{margin-bottom:15px;font-size:.9rem;line-height:1.4}.concern-card{padding:14px}.concern-card p{font-size:.84rem}.concern-final{margin-top:16px;font-size:.88rem}}
     @media(max-width:370px){h1{font-size:1.98rem}.hero h1{font-size:1.46rem}.section{padding-left:14px;padding-right:14px}.trust{font-size:.78rem}.benefit{font-size:.9rem}.final-grid{grid-template-columns:1fr}.mini-offer.best{margin-top:20px}.mini-badge{margin-top:-31px}.comparison{grid-template-columns:1fr}.compare-arrow{transform:rotate(90deg)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cta,.carousel{transition:none;scroll-behavior:auto}}
+    /* Reformulação 2026-10-17: estilos locais das dez seções, sem tocar em tracking ou checkout. */
+    .redesign .section{text-align:center}.redesign .section-copy{max-width:570px;margin:12px auto 24px;color:var(--muted)}
+    .redesign .hero{padding-top:38px}.redesign .hero h1{max-width:610px;margin:0 auto 12px;color:var(--ink)}
+    .redesign .hero .hero-copy{max-width:590px;margin:0 auto 20px}.redesign .hero-product{width:100%;max-width:620px;margin:20px auto 16px;border-radius:22px}
+    .hero-price{margin:10px 0 14px;color:var(--muted);font-weight:800}.hero-price strong{display:block;color:var(--blue);font-family:"Baloo 2",system-ui,sans-serif;font-size:2.25rem;line-height:1}
+    .compact-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:7px 15px;margin:17px auto 0;color:#587086;font-size:.8rem;font-weight:900}.compact-trust span:before{content:"✓";margin-right:5px;color:var(--green)}
+    .material{background:#f7fbff}.material .carousel-wrap{margin-top:22px}.material .preview-card{flex-basis:calc(72% - 10px)}
+    .pain-redesign{background:#eef8ff}.pain-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px;text-align:left}.pain-card{padding:18px;border-radius:19px;border:1px solid rgba(23,50,74,.08);box-shadow:0 8px 22px rgba(23,50,74,.05)}.pain-card:nth-child(1){background:#fff0f2}.pain-card:nth-child(2){background:#fff8df}.pain-card:nth-child(3){background:#f3efff}.pain-card:nth-child(4){background:#eaf6ff}.pain-icon{display:block;margin-bottom:7px;font-size:1.5rem}.pain-card p{margin:6px 0 0;color:#536b7d;font-size:.9rem}.pain-final{margin:22px auto 0;padding:15px;border-radius:15px;background:#fff;font-weight:900}
+    .solution-redesign{background:#fff}.solution-image{display:block;width:100%;height:auto;margin:22px auto 18px;border-radius:22px;box-shadow:var(--shadow)}
+    .bonus{background:#fffaf0}.bonus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:22px}.bonus-card{padding:13px;border:1px solid #f0e0ae;border-radius:20px;background:#fff;box-shadow:0 8px 22px rgba(23,50,74,.06)}.bonus-slot{display:grid;place-items:center;aspect-ratio:4/5;margin-bottom:12px;border:2px dashed #e3c85f;border-radius:15px;background:#fff9df;color:#8a7423;font-size:.72rem;font-weight:900;letter-spacing:.03em}.bonus-card h3{font-size:1rem}.bonus-card p{margin:6px 0 0;color:var(--muted);font-size:.82rem;line-height:1.4}.availability-note{margin:17px auto 0;color:#6e6033;font-size:.82rem;font-weight:800}
+    .benefits-redesign{background:#eaf6ff}.icon-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}.icon-card{min-height:120px;padding:16px 10px;border:1px solid #d8e8f2;border-radius:18px;background:#fff;box-shadow:0 7px 20px rgba(23,50,74,.05);font-size:.86rem;font-weight:900;line-height:1.35}.icon-card span{display:block;margin-bottom:7px;color:var(--blue);font-size:1.45rem}
+    .how-redesign{background:#f4faff}.step-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}.step-card{position:relative;padding:48px 12px 16px;border:1px solid #d8e8f2;border-radius:19px;background:#fff;box-shadow:0 7px 20px rgba(23,50,74,.05)}.step-card .step-num{left:50%;top:10px;width:32px;height:32px;transform:translateX(-50%);border-radius:50%}.step-icon{display:block;margin-bottom:7px;font-size:1.4rem}.step-card h3{font-size:1rem}.step-card p{margin:6px 0 0;color:var(--muted);font-size:.8rem;line-height:1.4}
+    .redesign .offers{background:linear-gradient(180deg,#f6fbff,#fffdf8)}.redesign .offer{margin-top:20px;text-align:left}.redesign .offer-head,.redesign .price{text-align:center}.redesign .offer-product{max-width:390px;margin:18px auto}.offer-intro{margin:6px auto 0;color:var(--muted);text-align:center}.offer-guarantee{margin:13px 0 0;text-align:center;color:#426954;font-size:.82rem;font-weight:900}
+    .proofs{background:#fffaf0}.redesign .testimonial-grid{margin-top:22px}.proof-placeholder{display:none}
+    .redesign .faq{background:#f7fbfd}.redesign .faq .section-copy{margin-bottom:20px}.redesign .faq-list{text-align:left}
+    @media(max-width:600px){.bonus-grid{grid-template-columns:1fr}.icon-grid,.step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.material .preview-card{flex-basis:88%}}
+    @media(max-width:460px){.redesign .section{padding:38px 16px}.redesign .hero{padding-top:25px}.redesign .hero h1{font-size:1.9rem;line-height:1.05;margin-bottom:9px}.redesign .hero .hero-copy{font-size:.94rem;line-height:1.4;margin-bottom:14px}.redesign .hero-product{width:100%;margin:13px auto 12px;border-radius:17px}.hero-price{margin:7px 0 11px}.hero-price strong{font-size:2rem}.compact-trust{font-size:.72rem;gap:5px 10px;margin-top:14px}.pain-grid{grid-template-columns:1fr;gap:8px}.pain-card{padding:15px}.bonus-grid{gap:9px}.bonus-card{display:grid;grid-template-columns:86px 1fr;grid-template-rows:auto auto;gap:2px 12px;text-align:left;align-items:center}.bonus-slot{grid-row:1/3;width:86px;margin:0}.bonus-card p{font-size:.8rem}.icon-card{min-height:100px;padding:13px 8px;font-size:.79rem}.step-card{padding:44px 9px 13px}.step-card p{font-size:.76rem}.redesign .offer{padding-left:15px;padding-right:15px}.redesign .testimonial-grid{grid-template-columns:1fr}.redesign .testimonial-card{padding:15px}.solution-image{border-radius:17px}}
   </style>
 </head>
 <body>
   <!-- Meta Pixel Code (noscript fallback) -->
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=27887190307626054&amp;ev=PageView&amp;noscript=1" alt=""></noscript>
   <noscript><div class="noscript">Ative o JavaScript para usar o carrossel. O restante da página continua disponível.</div></noscript>
-  <main class="page">
+  <main class="page redesign">
     <div class="promo">🎁 OFERTA ESPECIAL</div>
-    <section class="section hero">
-      <h1>Seu filho está aprendendo a ler, mas você sente que ele poderia estar <span class="hero-emphasis">avançando mais?</span></h1>
-      <p class="hero-copy">Ajude a <strong>reforçar o aprendizado</strong> do seu filho com atividades simples para praticar em casa, <strong>mesmo sem experiência ensinando</strong>.</p>
-      <img class="hero-product" src="/landing/assets/hero-atividades-alfabetizacao.png" alt="Kit digital Caminho das Letras com cinco livros em PDF e atividades infantis de alfabetização" width="1448" height="1086" fetchpriority="high">
-      <p class="hero-support">Acompanhe de perto <strong>cada nova conquista</strong> do seu filho na alfabetização.</p>
-      <ul class="hero-benefit-list"><li><strong>5 livros digitais</strong> com atividades prontas para imprimir.</li><li><strong>Acompanhe o progresso:</strong> perceba o que seu filho já consegue fazer sozinho.</li><li><strong>Reforce as dificuldades:</strong> pratique novamente o que ele ainda está aprendendo.</li><li><strong>Atividades curtas:</strong> encaixe a prática na rotina.</li><li><strong>Respeite o ritmo da criança:</strong> repita as atividades quantas vezes precisar.</li></ul>
-      <a class="cta section-cta" href="#ofertas">QUERO AJUDAR MEU FILHO ↓</a>
-      <div class="hero-reassurance" aria-label="Benefícios da compra"><span>Satisfação garantida</span><span>Acesso imediato</span><span>Garantia de 7 dias</span></div>
+
+    <section class="section hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Ajude crianças a avançar na leitura e na escrita!</h1>
+      <p class="hero-copy">Um kit com 5 livros de atividades para reforçar a alfabetização, economizar tempo e facilitar a prática no dia a dia.</p>
+      <img class="hero-product" src="/landing/assets/hero-kit-completo.png" alt="Caminho das Letras Kids com cinco livros, materiais complementares e exemplos de atividades" width="1448" height="1086" fetchpriority="high">
+      <p class="hero-price">A partir de <strong>R$ 9,90</strong></p>
+      <a class="cta section-cta" href="#ofertas">QUERO GARANTIR MEU KIT</a>
+      <div class="compact-trust" aria-label="Informações da compra"><span>Acesso imediato</span><span>Acesso vitalício</span><span>Garantia de 7 dias</span></div>
     </section>
-    <section class="section concern"><h2>Você está preocupado(a) porque seu filho ainda tem dificuldade para ler e escrever?</h2><div class="concern-arrow" aria-hidden="true">⏬</div><p class="concern-transition">Muitos pais acham que “cada criança tem seu tempo pra ler”. Até que...</p><div class="concern-grid"><article class="concern-card"><span class="concern-emoji" aria-hidden="true">😔</span><h3>Leitura virou motivo de estresse</h3><p>Cada tentativa de ler vira frustração, e o momento de aprender se torna um peso.</p></article><article class="concern-card"><span class="concern-emoji" aria-hidden="true">😣</span><h3>As notas baixas começaram a aparecer</h3><p>A professora alertou e você não sabe mais o que fazer para ajudar em casa.</p></article><article class="concern-card"><span class="concern-emoji" aria-hidden="true">💡</span><h3>Ela não é menos inteligente</h3><p>Só precisa aprender do jeito certo, com um método claro e divertido.</p></article></div><p class="concern-final">E o pior: ela começa a acreditar que não é capaz... sem nem saber o motivo.</p></section>
-    <section class="section gallery" id="atividades" aria-labelledby="gallery-title">
-      <span class="solution-label">Solução</span><h2 id="gallery-title">Veja o que seu filho vai praticar em cada livro</h2><p class="lead">Conheça atividades reais dos 5 livros e veja como você pode utilizá-las para ajudar seu filho em casa.</p>
-      <div class="carousel-wrap"><button class="carousel-btn prev" type="button" aria-label="Ver atividade anterior">‹</button><div class="carousel" id="activity-carousel" tabindex="0" aria-label="Prévia das atividades">
-        <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-vogais.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-vogais.png" alt="Atividade para completar palavras com a vogal que falta" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Vogais</span></article>        <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-inicial.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-inicial.png" alt="Atividade para encontrar a letra inicial das palavras" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Letra inicial</span></article>        <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-faltante.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-faltante.png" alt="Atividade para completar palavras com a letra que falta" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Completar letras</span></article>        <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-ligue-palavra.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-ligue-palavra.png" alt="Atividade de leitura para ligar a palavra à figura" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Imagem + palavra</span></article>        <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-leitura-frase.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-leitura-frase.png" alt="Atividade de leitura para marcar a figura correspondente à frase" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Leitura e compreensão</span></article>
-      </div><button class="carousel-btn next" type="button" aria-label="Ver próxima atividade">›</button></div><div class="gallery-sequence"><strong>5 livros organizados em sequência:</strong>Letras e Vogais → Sílabas → Formação de Palavras → Consciência Silábica → Leitura e Compreensão</div><div class="audience-note"><h3>Para quem é o Caminho das Letras?</h3><p>Para mães, pais e responsáveis que querem apoiar a alfabetização em casa, com atividades que vão do reconhecimento de letras à formação de palavras e à prática de leitura.</p></div>
-    </section>
-    <section class="section testimonials" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title">Quem já começou a usar, aprovou 💛</h2>
-      <p class="lead">Veja o que algumas mães acharam do material.</p>
-      <div class="testimonial-grid">
-        <article class="testimonial-card">
-          <header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-jennifer.webp" alt="Jennifer" width="320" height="569" loading="lazy"><strong class="testimonial-name">Jennifer</strong></header>
-          <blockquote>“Comprei há dois dias e já estou fazendo as atividades com meu filho. Já percebi uma boa melhora nele durante as atividades. Gostei bastante e com certeza vou recomendar para outras pessoas.”</blockquote>
-        </article>
-        <article class="testimonial-card">
-          <header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-julia-almeida.webp" alt="Julia Almeida" width="320" height="569" loading="lazy"><strong class="testimonial-name">Julia Almeida</strong></header>
-          <blockquote>“Boa tarde! Vim agradecer pelo material. Meu filho amou as atividades e também os jogos que comprei junto. Com eles consegui fazer ele prestar muito mais atenção.”</blockquote>
-        </article>
-        <article class="testimonial-card">
-          <header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-maria-julia.webp" alt="Maria Julia" width="320" height="569" loading="lazy"><strong class="testimonial-name">Maria Julia</strong></header>
-          <blockquote>“Terminei as atividades há três dias e voltei aqui só para deixar meu depoimento. Amei o material e senti que ajudou bastante nos estudos do meu filho.”</blockquote>
-        </article>
+
+    <section class="section material" id="atividades" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Veja de perto as atividades que você vai receber!</h2>
+      <p class="section-copy">De letras e sílabas até leitura e escrita, descubra atividades prontas para tornar a prática da alfabetização mais simples.</p>
+      <div class="carousel-wrap">
+        <button class="carousel-btn prev" type="button" aria-label="Ver atividade anterior">‹</button>
+        <div class="carousel" id="activity-carousel" tabindex="0" aria-label="Páginas reais dos cinco livros">
+          <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-vogais.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-vogais.png" alt="Atividade do livro 1 sobre vogais" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 1 • Letras e Vogais</span></article>
+          <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-inicial.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-inicial.png" alt="Atividade do livro 2 sobre sílabas simples" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 2 • Sílabas Simples</span></article>
+          <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-letra-faltante.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-letra-faltante.png" alt="Atividade do livro 3 sobre formação de palavras" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 3 • Formação de Palavras</span></article>
+          <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-ligue-palavra.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-ligue-palavra.png" alt="Atividade do livro 4 sobre consciência silábica" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 4 • Consciência Silábica</span></article>
+          <article class="preview-card"><picture class="asset-picture"><source srcset="/landing/assets/atividade-leitura-frase.webp" type="image/webp"><img class="preview-image" src="/landing/assets/atividade-leitura-frase.png" alt="Atividade do livro 5 sobre leitura e compreensão" width="1055" height="1491" loading="lazy"></picture><span class="preview-topic">Livro 5 • Leitura e Compreensão</span></article>
+        </div>
+        <button class="carousel-btn next" type="button" aria-label="Ver próxima atividade">›</button>
       </div>
     </section>
-    <section class="section offers" id="ofertas"><h2>Escolha seu kit</h2><p class="lead">2 livros por R$9,90 ou os 5 por R$14,90.</p><div class="offer-highlight">Os outros 3 livros saem por apenas R$5 a mais.</div>
-      <article class="offer basic compact-offer"><header class="offer-head"><h3 class="offer-name">PACOTE BÁSICO</h3><p class="offer-sub">Os 2 primeiros livros da coleção</p></header><div class="offer-body"><picture class="asset-picture"><source srcset="/landing/assets/pacote-basico-2-livros.webp" type="image/webp"><img class="offer-product" src="/landing/assets/pacote-basico-2-livros.png" alt="Pacote Básico Caminho das Letras com os livros 1 e 2" width="1254" height="1254" loading="lazy" decoding="async"></picture><div class="offer-info"><ul class="offer-list compact-list"><li>Letras e Vogais</li><li>Sílabas Simples</li><li>PDF pronto para imprimir</li></ul><div class="price"><strong>R$9,90</strong><small>Pagamento único</small></div></div></div><a class="cta checkout-basic" href="#ofertas">QUERO O PACOTE BÁSICO</a></article>
-      <aside class="bridge compact factual"><h3>Leve os 5 livros por apenas R$ 5 a mais.</h3></aside>
-      <article class="offer premium compact-offer" id="premium"><span class="badge">⭐ MAIS VENDIDO</span><header class="offer-head"><h3 class="offer-name">PACOTE PREMIUM</h3><p class="offer-sub">Os 5 livros da coleção</p></header><div class="offer-body"><picture class="asset-picture"><source srcset="/landing/assets/pacote-premium-5-livros.webp" type="image/webp"><img class="offer-product" src="/landing/assets/pacote-premium-5-livros.png" alt="Pacote Premium Caminho das Letras com os cinco livros" width="1254" height="1254" loading="lazy" decoding="async"></picture><div class="offer-info"><ul class="offer-list compact-list"><li>Letras e Vogais</li><li>Sílabas Simples</li><li>Formação de Palavras</li><li>Consciência Silábica</li><li>Leitura e Compreensão</li><li>PDF pronto para imprimir</li></ul><div class="price"><strong>R$14,90</strong><small>Pagamento único</small></div></div></div><a class="cta checkout-premium" href="#premium">QUERO OS 5 LIVROS</a></article>
+
+    <section class="section pain-redesign" aria-labelledby="pain-title">
+      <h2 id="pain-title">Essas dificuldades fazem parte do seu dia a dia?</h2>
+      <p class="section-copy">A criança conhece as letras, mas trava na hora de ler e escrever. A lição vira choro. E você não sabe mais como ajudar.</p>
+      <div class="pain-grid">
+        <article class="pain-card"><span class="pain-icon" aria-hidden="true">🔤</span><h3>Conhece as letras, mas não lê</h3><p>Sabe o alfabeto, trava ao juntar sílabas.</p></article>
+        <article class="pain-card"><span class="pain-icon" aria-hidden="true">😣</span><h3>A lição vira briga</h3><p>Resiste, foge e estudar vira motivo de estresse.</p></article>
+        <article class="pain-card"><span class="pain-icon" aria-hidden="true">📉</span><h3>Notas caindo</h3><p>A escola alertou e você não sabe o que fazer.</p></article>
+        <article class="pain-card"><span class="pain-icon" aria-hidden="true">💔</span><h3>Acha que é “burro”</h3><p>A autoestima cai e ele se compara aos colegas.</p></article>
+      </div>
+      <p class="pain-final">Calma. A criança não tem nada de errado. Só nunca teve acesso ao método certo.</p>
     </section>
-    <section class="section objections"><h2>Simples do começo ao fim.</h2><p class="lead">Você recebe o material pronto e pode começar a praticar com seu filho em casa.</p><div class="objection-grid"><article class="objection-card"><h3>📥 Receba e escolha</h3><p>Após a confirmação do pagamento, acesse os livros e escolha a atividade para começar.</p></article><article class="objection-card"><h3>🖨️ Imprima quando quiser</h3><p>Escolha uma página e imprima em casa, sempre que precisar.</p></article><article class="objection-card"><h3>👨‍👩‍👧 Pratique junto</h3><p>Acompanhe seu filho nas atividades, respeitando o ritmo de aprendizagem dele.</p></article></div><p class="objection-meta">Pagamento único • Acesso vitalício • Material digital</p><a class="cta section-cta" href="#ofertas">ESCOLHER MEU KIT ↓</a></section>
-    <section class="section faq"><h2>Dúvidas frequentes</h2><div class="faq-list">
-      <details><summary>O material é físico?</summary><p>Não. O material é digital e você recebe os arquivos para acessar e imprimir.</p></details>
-      <details><summary>Como eu recebo?</summary><p>Após a confirmação do pagamento, você recebe acesso ao material digital.</p></details>
-      <details><summary>Posso imprimir mais de uma vez?</summary><p>Sim. Você pode acessar o material e imprimir novamente quando quiser.</p></details>
-      <details><summary>Preciso pagar mensalidade?</summary><p>Não. O pagamento é único.</p></details>
-      <details><summary>Qual a diferença entre o Básico e o Premium?</summary><p>O Básico inclui 2 livros. O Premium inclui os 5 livros completos, sendo a opção mais completa.</p></details>
-    </div><a class="cta section-cta" href="#ofertas">ESCOLHER MEU KIT ↑</a></section>
-    <section class="section guarantee compact"><div class="guarantee-card"><div class="shield" aria-hidden="true">🛡️</div><h2>7 dias de garantia</h2><p>Conheça o material com tranquilidade. Se ele não for o que você esperava, você pode solicitar o reembolso dentro do prazo da garantia.</p></div></section>
-    <footer class="footer"><div class="brand">Caminho das Letras</div><p>Material digital de apoio para atividades de alfabetização em casa.</p><div class="footer-links"><span class="footer-link">Termos de Uso</span><span class="footer-link">Política de Privacidade</span><span class="footer-link">Contato</span></div><p class="copyright">© 2026 Caminho das Letras. Todos os direitos reservados.</p></footer>
+
+    <section class="section solution-redesign" aria-labelledby="solution-title">
+      <h2 id="solution-title">O apoio que faltava para facilitar a alfabetização!</h2>
+      <p class="section-copy">Com o Caminho das Letras Kids, você tem 5 livros com atividades organizadas para trabalhar letras, sílabas, palavras, leitura e escrita de forma prática.<br><br>Tudo pronto para imprimir e usar em casa, na escola ou no reforço escolar.</p>
+      <img class="solution-image" src="/landing/assets/solucao-kit-completo.png" alt="Cinco livros Caminho das Letras e materiais complementares" width="1448" height="1086" loading="lazy">
+      <a class="cta section-cta" href="#ofertas">QUERO CONHECER OS PACOTES</a>
+    </section>
+
+    <section class="section bonus" aria-labelledby="bonus-title">
+      <h2 id="bonus-title">E ainda recebe bônus extras exclusivos!</h2>
+      <p class="section-copy">Além dos livros de alfabetização, você conta com materiais complementares para tornar as atividades mais variadas e interessantes.</p>
+      <div class="bonus-grid">
+        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Jogos de Alfabetização">BONUS_JOGOS</div><div><h3>Jogos de Alfabetização</h3><p>Jogos educativos para praticar letras, sílabas e palavras de forma divertida.</p></div></article>
+        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Kit de Leitura e Interpretação">BONUS_LEITURA</div><div><h3>Kit de Leitura e Interpretação</h3><p>Textos infantis e exercícios para praticar a leitura e a compreensão.</p></div></article>
+        <article class="bonus-card"><div class="bonus-slot" aria-label="Espaço reservado para a capa Alfabeto e Sílabas Móveis">BONUS_ALFABETO</div><div><h3>Alfabeto e Sílabas Móveis</h3><p>Materiais para recortar, combinar letras e formar palavras de maneira prática.</p></div></article>
+      </div>
+      <p class="availability-note">Capas individuais aguardando envio. A disponibilidade comercial deve ser confirmada na oferta antes da publicação.</p>
+    </section>
+
+    <section class="section benefits-redesign" aria-labelledby="benefits-title">
+      <h2 id="benefits-title">Mais facilidade para ensinar. Mais apoio para aprender.</h2>
+      <div class="icon-grid">
+        <article class="icon-card"><span aria-hidden="true">✓</span>Atividades prontas para usar</article>
+        <article class="icon-card"><span aria-hidden="true">📖</span>Reforço de leitura e escrita</article>
+        <article class="icon-card"><span aria-hidden="true">⏱️</span>Menos tempo preparando materiais</article>
+        <article class="icon-card"><span aria-hidden="true">🏠</span>Uso em casa, escola ou reforço</article>
+        <article class="icon-card"><span aria-hidden="true">🗂️</span>Conteúdo organizado por tema</article>
+        <article class="icon-card"><span aria-hidden="true">🔤</span>Prática de letras, sílabas e palavras</article>
+        <article class="icon-card"><span aria-hidden="true">🖨️</span>Pronto para imprimir</article>
+        <article class="icon-card"><span aria-hidden="true">✨</span>Aplicação simples no dia a dia</article>
+      </div>
+    </section>
+
+    <section class="section how-redesign" aria-labelledby="how-title">
+      <h2 id="how-title">4 passos simples para começar!</h2>
+      <div class="step-grid">
+        <article class="step-card"><span class="step-num">1</span><span class="step-icon" aria-hidden="true">🛒</span><h3>Comprar</h3><p>Escolha seu pacote e finalize o pagamento com segurança.</p></article>
+        <article class="step-card"><span class="step-num">2</span><span class="step-icon" aria-hidden="true">📥</span><h3>Receber</h3><p>Após a confirmação, receba o acesso aos materiais digitais.</p></article>
+        <article class="step-card"><span class="step-num">3</span><span class="step-icon" aria-hidden="true">🖨️</span><h3>Imprimir</h3><p>Baixe os arquivos em PDF e imprima as atividades que desejar.</p></article>
+        <article class="step-card"><span class="step-num">4</span><span class="step-icon" aria-hidden="true">📚</span><h3>Aplicar</h3><p>Escolha as atividades e comece a praticar no ritmo da criança.</p></article>
+      </div>
+    </section>
+
+    <section class="section offers" id="ofertas" aria-labelledby="offers-title">
+      <h2 id="offers-title">Escolha o pacote ideal para você!</h2>
+      <article class="offer basic">
+        <header class="offer-head"><h3 class="offer-name">Pacote Básico</h3><p class="offer-intro">Uma opção acessível para começar a reforçar a alfabetização com atividades prontas.</p></header>
+        <picture class="asset-picture"><source srcset="/landing/assets/pacote-basico-2-livros.webp" type="image/webp"><img class="offer-product" src="/landing/assets/pacote-basico-2-livros.png" alt="Pacote Básico com os livros Letras e Vogais e Sílabas Simples" width="1254" height="1254" loading="lazy" decoding="async"></picture>
+        <ul class="offer-list"><li>Livro 1 — Letras e Vogais</li><li>Livro 2 — Sílabas Simples</li><li>Arquivos digitais em PDF</li><li>Acesso vitalício</li></ul>
+        <div class="price"><strong>R$9,90</strong><small>Pagamento único</small></div>
+        <a class="cta checkout-basic" href="#ofertas">QUERO GARANTIR MEU PACOTE</a><p class="offer-guarantee">Compra protegida por 7 dias de garantia.</p>
+      </article>
+      <article class="offer premium" id="premium">
+        <header class="offer-head"><h3 class="offer-name">Pacote Premium</h3><p class="offer-intro">Uma opção mais completa para quem deseja ampliar as possibilidades de atividades.</p></header>
+        <picture class="asset-picture"><source srcset="/landing/assets/pacote-premium-5-livros.webp" type="image/webp"><img class="offer-product" src="/landing/assets/pacote-premium-5-livros.png" alt="Pacote Premium com os cinco livros Caminho das Letras" width="1254" height="1254" loading="lazy" decoding="async"></picture>
+        <ul class="offer-list"><li>Livro 1 — Letras e Vogais</li><li>Livro 2 — Sílabas Simples</li><li>Livro 3 — Formação de Palavras</li><li>Livro 4 — Consciência Silábica</li><li>Livro 5 — Leitura e Compreensão</li><li>Arquivos digitais em PDF</li><li>Acesso vitalício</li></ul>
+        <div class="price"><strong>R$14,90</strong><small>Pagamento único</small></div>
+        <a class="cta checkout-premium" href="#premium">QUERO GARANTIR MEU PACOTE</a><p class="offer-guarantee">Compra protegida por 7 dias de garantia.</p>
+      </article>
+    </section>
+
+    <section class="section proofs" aria-labelledby="proofs-title">
+      <h2 id="proofs-title">Conheça melhor o Caminho das Letras Kids!</h2>
+      <p class="section-copy">Veja exemplos reais do material e confira as experiências de quem já utilizou nossas atividades.</p>
+      <div class="testimonial-grid">
+        <article class="testimonial-card"><header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-jennifer.webp" alt="Jennifer" width="320" height="569" loading="lazy"><strong class="testimonial-name">Jennifer</strong></header><blockquote>“Comprei há dois dias e já estou fazendo as atividades com meu filho. Já percebi uma boa melhora nele durante as atividades. Gostei bastante e com certeza vou recomendar para outras pessoas.”</blockquote></article>
+        <article class="testimonial-card"><header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-julia-almeida.webp" alt="Julia Almeida" width="320" height="569" loading="lazy"><strong class="testimonial-name">Julia Almeida</strong></header><blockquote>“Boa tarde! Vim agradecer pelo material. Meu filho amou as atividades e também os jogos que comprei junto. Com eles consegui fazer ele prestar muito mais atenção.”</blockquote></article>
+        <article class="testimonial-card"><header class="testimonial-head"><img class="testimonial-photo" src="/landing/assets/depoimento-maria-julia.webp" alt="Maria Julia" width="320" height="569" loading="lazy"><strong class="testimonial-name">Maria Julia</strong></header><blockquote>“Terminei as atividades há três dias e voltei aqui só para deixar meu depoimento. Amei o material e senti que ajudou bastante nos estudos do meu filho.”</blockquote></article>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Dúvidas frequentes</h2>
+      <div class="faq-list">
+        <details><summary>O material é físico ou digital?</summary><p>O kit é 100% digital, entregue em arquivos PDF para baixar e imprimir.</p></details>
+        <details><summary>Preciso ser professor para utilizar?</summary><p>Não. As atividades podem ser utilizadas por famílias, professores e profissionais que acompanham a alfabetização.</p></details>
+        <details><summary>Como recebo o material?</summary><p>Após a confirmação da compra, você recebe as instruções para acessar seus arquivos digitais.</p></details>
+        <details><summary>Preciso imprimir tudo de uma vez?</summary><p>Não. Você pode imprimir apenas as atividades que pretende utilizar.</p></details>
+        <details><summary>As atividades servem para crianças que estão começando a ler?</summary><p>Sim. O kit inclui atividades que trabalham diferentes habilidades, desde as letras até a leitura e a escrita.</p></details>
+        <details><summary>O acesso é vitalício?</summary><p>Sim. Você terá acesso vitalício aos materiais adquiridos.</p></details>
+        <details><summary>Tem garantia?</summary><p>Sim. Sua compra conta com garantia de 7 dias.</p></details>
+      </div>
+    </section>
+
+    <footer class="footer"><div class="brand">Caminho das Letras</div><p>Material digital de apoio para atividades de alfabetização.</p><div class="footer-links"><span class="footer-link">Termos de Uso</span><span class="footer-link">Política de Privacidade</span><span class="footer-link">Contato</span></div><p class="copyright">© 2026 Caminho das Letras. Todos os direitos reservados.</p></footer>
   </main>
   <div class="upgrade-modal" id="upgrade-modal" role="dialog" aria-modal="true" aria-labelledby="upgrade-title" hidden>
     <div class="upgrade-dialog">
@@ -151,7 +241,7 @@
           firstCarouselImage.addEventListener('error', prepareRemainingOnce, { once: true });
         }
         observeAhead(
-          document.querySelector('.testimonials'),
+          document.querySelector('.proofs'),
           [...document.querySelectorAll('.testimonial-photo')],
           '1500px 0px'
         );
@@ -225,4 +315,5 @@
   </script>
 </body>
 </html>
+
 
